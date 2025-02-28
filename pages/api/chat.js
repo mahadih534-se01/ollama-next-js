@@ -10,8 +10,8 @@ export default async function handler(req, res) {
 
     const response = await ollama.chat({
       model: "deepseek-r1:1.5b",
-      messages: [{ role: "user", content: message }],
-      base_url="https://mahadih534-own-ollama-api-server.hf.space/v1/"
+      messages: [{ role: "user", content: message }]
+
     });
 
     return res.status(200).json({ message: response.message.content });
